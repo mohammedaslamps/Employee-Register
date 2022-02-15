@@ -10,8 +10,6 @@ class Position(models.Model):
 
 class Employee(models.Model):
     fullName =models.CharField(max_length=100)
-    emp_num = models.CharField(max_length=3)
-    mobile =models.CharField(max_length=15)
+    emp_num = models.IntegerField(max_length=3)
+    mobile =models.IntegerField(max_length=10)
     position= models.ForeignKey(Position,on_delete=models.CASCADE)
-
-    
